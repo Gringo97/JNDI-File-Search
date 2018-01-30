@@ -47,9 +47,12 @@ public class Controlador {
 		for (int i = 1; i < seleccion.size(); i++) {
 			try {
 				ctx.lookup(seleccion.get(i).toString());
-
+				modelo.setLabelRespuesta(i,true);
 				System.out.println(seleccion.get(i).toString() + "  ENCONTRADO!!");
+				System.out.println(i);
 			} catch (NamingException ex) {
+				
+				modelo.setLabelRespuesta(i, false);
 				System.out.println(seleccion.get(i).toString() + "  NO EXISTE");
 			}
 		}

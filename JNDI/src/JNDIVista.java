@@ -1,3 +1,4 @@
+
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
@@ -32,6 +33,8 @@ public class JNDIVista extends JFrame {
 	private JButton btnBusqueda;
 	private Controlador controlador;
 	private Modelo modelo;
+	private JLabel lbl2;
+	private JLabel lbl3;
 	
 	
 
@@ -67,9 +70,9 @@ public class JNDIVista extends JFrame {
 		
 		lbl1 = new JLabel("");
 		
-		JLabel lbl2 = new JLabel("");
+		lbl2 = new JLabel("");
 		
-		JLabel lbl3 = new JLabel("");
+		lbl3 = new JLabel("");
 		
 		btnBusqueda = new JButton("Buscar");
 		btnBusqueda.addActionListener(new ActionListener() {
@@ -96,8 +99,8 @@ public class JNDIVista extends JFrame {
 							.addContainerGap()
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
 								.addGroup(gl_contentPane.createSequentialGroup()
-									.addComponent(cbRutas, GroupLayout.PREFERRED_SIZE, 142, GroupLayout.PREFERRED_SIZE)
-									.addGap(61)
+									.addComponent(cbRutas, GroupLayout.PREFERRED_SIZE, 185, GroupLayout.PREFERRED_SIZE)
+									.addGap(18)
 									.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
 										.addComponent(textField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 										.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
@@ -113,7 +116,7 @@ public class JNDIVista extends JFrame {
 							.addComponent(lblDirectorio)
 							.addGap(129)
 							.addComponent(lblFichero)))
-					.addContainerGap(43, Short.MAX_VALUE))
+					.addContainerGap(89, Short.MAX_VALUE))
 		);
 		gl_contentPane.setVerticalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
@@ -140,6 +143,36 @@ public class JNDIVista extends JFrame {
 					.addContainerGap())
 		);
 		contentPane.setLayout(gl_contentPane);
+	}
+
+
+	public JLabel getLbl1() {
+		return lbl1;
+	}
+
+
+	public void setLbl1(String lbl1) {
+		this.lbl1.setText(lbl1);
+	}
+
+
+	public JLabel getLbl2() {
+		return lbl2;
+	}
+
+
+	public void setLbl2(String lbl2) {
+		this.lbl2.setText(lbl2);
+	}
+
+
+	public JLabel getLbl3() {
+		return lbl3;
+	}
+
+
+	public void setLbl3(String lbl3) {
+		this.lbl3.setText(lbl3);
 	}
 
 
