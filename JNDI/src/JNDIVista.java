@@ -51,7 +51,7 @@ public class JNDIVista extends JFrame {
 	
 	public JNDIVista() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 570, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -60,13 +60,16 @@ public class JNDIVista extends JFrame {
 		cbRutas.setModel(new DefaultComboBoxModel(new String[] {"file:c:\\Users\\oscar.fuente\\Pictures", "file:c:\\Users\\oscar.fuente\\Documents", "file:c:\\Users\\oscar.fuente\\Desktop"}));
 		
 		textField_1 = new JTextField();
+		textField_1.setText(null);
 		textField_1.setColumns(10);
 		
 		textField_2 = new JTextField();
 		textField_2.setColumns(10);
+		textField_2.setText(null);
 		
 		textField = new JTextField();
 		textField.setColumns(10);
+		textField.setText(null);
 		
 		lbl1 = new JLabel("");
 		
@@ -94,37 +97,40 @@ public class JNDIVista extends JFrame {
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.TRAILING)
 				.addGroup(gl_contentPane.createSequentialGroup()
+					.addGap(111)
+					.addComponent(lblDirectorio)
+					.addPreferredGap(ComponentPlacement.RELATED, 209, Short.MAX_VALUE)
+					.addComponent(lblFichero, GroupLayout.PREFERRED_SIZE, 44, GroupLayout.PREFERRED_SIZE)
+					.addGap(134))
+				.addGroup(Alignment.LEADING, gl_contentPane.createSequentialGroup()
+					.addContainerGap()
+					.addComponent(cbRutas, GroupLayout.PREFERRED_SIZE, 241, GroupLayout.PREFERRED_SIZE)
+					.addGap(92)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
 						.addGroup(gl_contentPane.createSequentialGroup()
-							.addContainerGap()
-							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-								.addGroup(gl_contentPane.createSequentialGroup()
-									.addComponent(cbRutas, GroupLayout.PREFERRED_SIZE, 185, GroupLayout.PREFERRED_SIZE)
-									.addGap(18)
-									.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-										.addComponent(textField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-										.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-										.addComponent(textField_2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-									.addGap(36)
-									.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-										.addComponent(lbl3)
-										.addComponent(lbl2)
-										.addComponent(lbl1)))
-								.addComponent(btnBusqueda)))
+							.addComponent(btnBusqueda)
+							.addContainerGap())
 						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGap(57)
-							.addComponent(lblDirectorio)
-							.addGap(129)
-							.addComponent(lblFichero)))
-					.addContainerGap(89, Short.MAX_VALUE))
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+								.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+								.addComponent(textField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+								.addComponent(textField_2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+							.addPreferredGap(ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+								.addComponent(lbl1)
+								.addComponent(lbl2)
+								.addGroup(gl_contentPane.createSequentialGroup()
+									.addGap(6)
+									.addComponent(lbl3, GroupLayout.PREFERRED_SIZE, 59, GroupLayout.PREFERRED_SIZE)))
+							.addGap(35))))
 		);
 		gl_contentPane.setVerticalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addGap(18)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(lblDirectorio)
-						.addComponent(lblFichero))
+						.addComponent(lblFichero)
+						.addComponent(lblDirectorio))
 					.addGap(18)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
 						.addComponent(cbRutas, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
@@ -136,11 +142,11 @@ public class JNDIVista extends JFrame {
 						.addComponent(lbl2))
 					.addGap(18)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(textField_2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-						.addComponent(lbl3))
-					.addPreferredGap(ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
+						.addComponent(lbl3)
+						.addComponent(textField_2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+					.addGap(40)
 					.addComponent(btnBusqueda)
-					.addContainerGap())
+					.addContainerGap(42, Short.MAX_VALUE))
 		);
 		contentPane.setLayout(gl_contentPane);
 	}
@@ -214,6 +220,4 @@ public class JNDIVista extends JFrame {
 	public void setTextField(JTextField textField) {
 		this.textField = textField;
 	}
-	
-	
 }

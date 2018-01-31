@@ -23,13 +23,13 @@ public class Controlador {
 		List<String> seleccion = new ArrayList<String>();
 
 		seleccion.add(vista.getCbRutas().getSelectedItem().toString());
-		if (vista.getTextField().getText() != null) {
+		if (vista.getTextField().getText() != null && (vista.getTextField().getText().length() < 1) ) {
 			seleccion.add(vista.getTextField().getText().toString());
 		}
-		if (vista.getTextField_1().getText() != null) {
+		if (vista.getTextField_1().getText() != null && (vista.getTextField_1().getText().length() < 1) ) {
 			seleccion.add(vista.getTextField_1().getText().toString());
 		}
-		if (vista.getTextField_2().getText() != null) {
+		if (vista.getTextField_2().getText() != null && (vista.getTextField_2().getText().length() < 1) ) {
 			seleccion.add(vista.getTextField_2().getText().toString());
 		}
 		// creamos el initial context
